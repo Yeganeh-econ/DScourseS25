@@ -1,0 +1,70 @@
+
+R version 4.2.1 (2022-06-23) -- "Funny-Looking Kid"
+Copyright (C) 2022 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> download.file("https://www.vizgr.org/historical-events/search.php?format=json&begin_date=00000101&end_date=20240209&lang=en", "dates.json")
+trying URL 'https://www.vizgr.org/historical-events/search.php?format=json&begin_date=00000101&end_date=20240209&lang=en'
+downloaded 8.8 MB
+
+> if(file.exists("dates.json")) {
++   print("File downloaded successfully")
++ } else {
++   print("File download failed")
++ }
+[1] "File downloaded successfully"
+> library(jsonlite)
+> library(tidyverse)
+── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.5.1     ✔ tibble    3.2.1
+✔ lubridate 1.9.4     ✔ tidyr     1.3.1
+✔ purrr     1.0.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter()  masks stats::filter()
+✖ purrr::flatten() masks jsonlite::flatten()
+✖ dplyr::lag()     masks stats::lag()
+ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+> 
+> json_text <- readLines("dates.json", warn = FALSE)
+> mylist <- fromJSON(paste(json_text, collapse = ""))
+> 
+> # Convert list to data frame
+> mydf <- bind_rows(mylist$result[-1])
+> 
+> # Check class of objects
+> print(class(mydf))
+[1] "tbl_df"     "tbl"        "data.frame"
+> print(class(mydf$date))
+[1] "character"
+> 
+> # Print first few rows
+> print(head(mydf))
+# A tibble: 6 × 6
+  date  description                        lang  category1 category2 granularity
+  <chr> <chr>                              <chr> <chr>     <chr>     <chr>      
+1 1     Tiberius, under order of Augustus… en    By place  Roman Em… year       
+2 1     Gaius Caesar and Lucius Aemilius … en    By place  Roman Em… year       
+3 1     Gaius Caesar marries Livilla, dau… en    By place  Roman Em… year       
+4 1     Quirinius becomes a chief advisor… en    By place  Roman Em… year       
+5 1     Areius Paianeius becomes Archon o… en    By place  Roman Em… year       
+6 1     The ''Yuanshi'' era of the Chines… en    By place  Asia      year       
+> 
+> proc.time()
+   user  system elapsed 
+  7.688   0.754  26.738 
