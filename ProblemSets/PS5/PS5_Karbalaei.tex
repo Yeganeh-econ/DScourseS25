@@ -1,0 +1,55 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{fancyvrb}
+\title{Problem Set 5- Questions 3 and 4}
+\author{Yeganeh Karbalaei}
+\date{}
+\begin{document}
+\maketitle
+
+\section{Web Scraping from Wikipedia Economics Page}
+
+\subsection{Choice of Data Source and Motivation}
+For this assignment, I chose to scrape data from the Wikipedia page on Economics. Initially, I attempted to extract data from the Guttmacher Institute website, which focuses on reproductive health research and policy analysis. But, I encountered some problems that suggested possible server-side restrictions on web scraping activities. Then I selected a less riskier option and chose the Wikipedia Economics page for its comprehensive content and accessibility.
+
+Though, I was familiar with heterodox economics as a field that challenges mainstream economic theories and methodologies, I was unaware of its diverse branches and theoretical frameworks. This discovery presented a good opportunity to build a web scraper that could collect and organize information about these alternative economic schools of thought. This assignment was interesting and useful activity since I became more interested in reading about these fields and it may help me through my current research especially the ecological and institutional economics.  
+
+\subsection{Findings and Value}
+The web scraping process produced the following dataset:
+
+\begin{Verbatim}
+school_name,description
+Marxian economics,2 History of economic thought Toggle History of economic thought subsection 2.1 From antiquity through the physiocrats 2.2 Classical political economy 2.3 Marxian economics 2.4 Neoclassical economics 2.5 Keynesian economics 2.6 Post-WWII economics 2.6.1 Monetarism 2.6.2 New classical economics 2.6.3 New Keynesians 2.6.4 New neoclassical synthesis 2.6.5 After the financial crisis 2.7 Other schools and approaches
+Austrian School,"Austrian School, emphasizing human action, property rights and the freedom to contract and transact to have a thriving and successful economy.[96] It also emphasises that the state should play as small role as possible (if any role) in the regulation of economic activity between two transacting parties. [97] Friedrich Hayek and Ludwig von Mises are the two most prominent representatives of the Austrian school."
+Post-Keynesian economics,Post-Keynesian economics concentrates on macroeconomic rigidities and adjustment processes. It is generally associated with the University of Cambridge and the work of Joan Robinson.[98]
+Ecological economics,"Ecological economics like environmental economics studies the interactions between human economies and the ecosystems in which they are embedded,[99] but in contrast to environmental economics takes an oppositional position towards general mainstream economic principles. A major difference between the two subdisciplines is their assumptions about the substitution possibilities between human-made and natural capital.[100]"
+Feminist economics,"Feminist economics emphasises the role that gender plays in economies, challenging analyses that render gender invisible or support gender-oppressive economic systems.[102] The goal is to create economic research and policy analysis that is inclusive and gender-aware to encourage gender equality and improve the well-being of marginalised groups."
+Constitutional economics,A heterodox school of economic thought (description not extracted)
+Institutional economics,A heterodox school of economic thought (description not extracted)
+Evolutionary economics,A heterodox school of economic thought (description not extracted)
+Dependency theory,A heterodox school of economic thought (description not extracted)
+Structuralist economics,A heterodox school of economic thought (description not extracted)
+World systems theory,A heterodox school of economic thought (description not extracted)
+Econophysics,A heterodox school of economic thought (description not extracted)
+Econodynamics,A heterodox school of economic thought (description not extracted)
+Biophysical economics,A heterodox school of economic thought (description not extracted)
+
+    
+\end{Verbatim}[breaklines=true,breakanywhere=true]
+
+
+\subsection{Online Tutorial}
+I used Claude to help me with question three.
+
+
+\section{Web Scraping from Yahoo Finance}
+\subsection{Findings}
+I used Yahoo Finance to compare the stock value of chain grocery stores and particularly see what has Sprouts Farmers Market did in past 12 months. 
+I found that Sprouts comparing with larger competitors like Walmart and Costco, showed higher volatility but also periods of stronger growth. Probably how Sprouts responds to shocks is different from larger companies. 
+The monthly analysis demonstrates interesting seasonal patterns in SFM's stock performance. It  seemed it may be related to people's seasonal shopping patterns.
+
+\subsection{Packages}
+I used quantmod, dplyr, ggplot2 and tidyr. 
+
+\end{document}
