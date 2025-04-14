@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+
+\begin{document}
+\title{Problem Set 10}
+\author{Yeganeh Karbalaei}
+\date{April, 2025}
+
+\maketitle
+
+\section{Question 9}
+Below is a table showing the optimal values of the tuning parameters for each algorithm along with their out-of-sample performance:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|c|l|}
+\hline
+\textbf{Algorithm} & \textbf{Accuracy} & \textbf{Optimal Parameters} \\
+\hline
+Logistic Regression & 0.85 & penalty = 0.00 \\
+\hline
+Decision Tree & 0.87 & cost\_complexity = 0.00, tree\_depth = 15.00, min\_n = 10.00 \\
+\hline
+Neural Network & 0.85 & hidden\_units = 9.00, penalty = 0.08 \\
+\hline
+k-Nearest Neighbors & 0.84 & neighbors = 30.00 \\
+\hline
+Support Vector Machine & 0.86 & cost = 1.00, rbf\_sigma = 0.25 \\
+\hline
+\end{tabular}
+\caption{Optimal tuning parameters and out-of-sample accuracy for each algorithm}
+\label{tab:results}
+\end{table}
+
+By comparing the performance of the algorithms, we see the Decision Tree achieved the highest out-of-sample accuracy at 87\%, after the Decision Tree, Support Vector Machine got 86\% accuracy. The Logistic Regression and Neural Network both achieved 85\% accuracy, while the k-Nearest Neighbors model had the lowest accuracy at 84\%. It means  it correctly predicted whether someone was a high earner or not for 84\% of the individuals in the test dataset.
+
+The Decision Tree model performed best with a maximum depth of 15 levels and a minimum of 10 observations required in a node before further splitting. It means the tree could have up to 15 sequential decision points from the root to the furthest leaf node. This high depth allows the model to capture complex patterns and relationships in the dataset.
+
+The Support Vector Machine performed well with cost parameter 1.00 and rbf\_sigma of 0.25, indicating a balanced approach towards the classification margin and a mid kernel width. 0.25 for kernel width means  SVM is considering data points that are relatively close to each other as similar.
+
+
+\end{document}
