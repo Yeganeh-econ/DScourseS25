@@ -1,0 +1,368 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{natbib}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{enumitem}
+
+% Set margins
+\usepackage[margin=1in]{geometry}
+
+% Title information
+\title{The Relationship Between Indian Health Service Funding and Native American Infant Mortality Rates}
+\author{Yeganeh Karbalaei\\
+University of Oklahoma}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\footnotetext[1]{Department of Economics, University of Oklahoma. E-mail address: yeganeh.karbalaei-1@ou.edu}
+
+\begin{abstract}
+Despite overall infant mortality reductions throughout the United States, American Indian and Alaska Native (AIAN) populations continue to have disproportionately high infant mortality. This study examines the potential causal relationship between Indian Health Service (IHS) funding and AIAN infant survival rates. Using CDC Period/Cohort Linked Birth-Infant Death Data from 2000-2002, we employ a structural equation modeling approach to investigate direct and indirect pathways through which IHS funding may affect infant mortality, with focus on prenatal care access as a mediating variable. Our initial findings reveal a statistically significant positive correlation between infant survival and IHS budget index (coefficient = 0.000222, p = 0.0282), suggesting that additional financing for IHS services may be desirable. We did observe counterintuitive correlations between a few variables, however, including between prenatal visits and infant survival that revealed a negative correlation, which is potentially reflective of selection effects and endogeneity issues requiring more sophisticated analytical methods. This study is not completed yet and needs more complex methods to be used but adds to our knowledge regarding persistent health disparities in Native American communities and supplies evidence supporting the potential effectiveness of allocating more resources to the Indian Health Service as a policy solution for lowering AIAN infant mortality.
+\end{abstract} 
+
+\newpage
+\section{Introduction}
+
+While infant mortality has improved in the United States, significant
+disparities persist between racial and ethnic groups.
+African American infants still experiencing the highest rate of mortality, with mortality rates approximately 2.3 times higher than those of non-Hispanic white infants. According to recent CDC data, the infant mortality rate among African American babies remains at approximately 10.8 deaths per 1,000 live births, compared to 4.6 per 1,000 among white infants.\newline These disparities persist even when controlling for factors such as maternal education and income, suggesting that systemic and structural barriers, including racism, play significant roles in determining infant health outcomes.
+Hispanic and Asian American infants generally have mortality rates similar to or lower than those of non-Hispanic white infants, with variations among ethnic subgroups. Meanwhile,
+Native American infants experience some of the highest mortality rates,
+and less advancement has been made toward eliminating these disparities.\newline
+The most significant institution of healthcare provision to the Native American community is the Indian Health Service (IHS), which delivers services across 12 service areas across the United States. IHS infrastructure includes 26 hospitals, 59 health centers, and 32 health stations operated directly by IHS, as well as 33 urban Indian health projects. In addition to these, through Self-Determination contracts with tribal organizations, IHS oversees 19 hospitals, 284 health centers, 79 health stations, and 163 Alaska village clinics. Despite this comprehensive network, persistent underfunding of IHS can be found as a contributory factor toward continued health disparities. The disparity in funding for IHS and other federal health programs has led to staffing deficiencies, antiquated facilities, and limited service availability, all of which can influence prenatal and infant care. This research will attempt to ascertain whether there are relationships between the disparity in IHS funding levels and Native American infant survival disparities.
+
+\section{Literature Review}
+
+\subsection{Infant Mortality Disparities}
+
+Infant mortality rate is the number of infant deaths under one year of
+age per 1,000 live births each year and it includes both neonatal
+mortality and postnatal rates. Infant mortality refers to the death of a
+baby that occurs between the time it is born and 1 year of age. If a
+baby dies before age 28 days, the death can also be classified as
+neonatal mortality (Infant Mortality, 2025).
+
+Despite overall improvements in infant mortality rates (IMR) in the
+United States, significant racial disparities persist, particularly
+among American Indians and Alaskan Natives (AIAN) communities. Between
+2005 and 2014, while other racial and ethnic groups experienced a steady
+decline in infant mortality rates, the American Indian population showed
+no significant improvement. In Alaska, the average infant mortality rate
+for American Indian infants between 2016 and 2018 was 9.3 per 1,000 live
+births, the highest among all racial and ethnic groups in the state
+\citep{jang2022}.
+
+\subsection{Causes of Death Among AIAN Infants}
+
+In general, the leading causes of death for AIAN children less than 1
+year of age can be grouped into three different diagnostic categories:
+congenital malformations, sudden infant death syndrome (SIDS), and
+unintentional injuries \citep{wong2014}. However, AIAN infants and
+neonates also died of medical conditions resulting from short gestation
+and low birth weight. After the first
+year of life, mortality in AIAN children shifts largely to accidental
+and nonaccidental trauma, including homicide and suicide, accounting for
+41 percent of all deaths among AIAN children \citep{wong2014}.
+Notably, the overall AIAN death rate for SIDS among infants is more than
+double that for the non-Hispanic white population \citep{macdorman2011}.
+
+\subsection{Parental Behaviors}
+
+On the other side, parents' habits can also affect infants' health. For
+example, based on the studies done by health researchers, native
+American women have higher overall rates of smoking compared to other
+ethnicities. Studies in Alaska and Minnesota documented smoking rates
+nearly twice as high as those of non-Native women, with one Minnesota
+study reporting 39\% and another 45.7\% of AIAN women smoking compared to
+11--11.2\% in non-Indigenous groups \citep{kaplan1997}.
+
+Research also suggests that prenatal care can influence important
+postpartum maternal behaviors such as smoking, breastfeeding and
+well-baby visits which is critical to infants health \citep{reichman2010}.
+\subsection{IHS Funding Disparities and Health Outcomes}
+The longstanding health disparities suffered by American Indian and Alaska Native (AIAN) communities have been exhaustively explained by persistent chronic underfunding of healthcare programs for the groups. The Department of Health and Human Services reported that overall IHS funding only pays for an estimated 48.6\% of AIANs' health care needs, leaving wide service gaps that lead to poor health outcomes \citep{aspe2022}. Despite its large number of facilities, the average age of IHS healthcare facilities is more than 40 years, and this poses difficulties in providing modern healthcare and recruiting staff.\newline
+
+These resource constraints have tangible impacts on infant and maternal health. Infant mortality rates in 2020 for AIAN populations were 60\% higher than those of the entire U.S. population (8.93 vs. 5.43 deaths per 1,000 live births), showing enormous disparities in accessing quality prenatal and postnatal care \citep{aspe2022}. These disparities are particularly noteworthy in light of higher rates of risk factors among AIAN populations, including high rates of diabetes, alcohol and drug use disorders, and mental illness that require more healthcare services to manage effectively.
+
+Staffing shortfalls further exacerbate these problems, with IHS reporting vacancy levels of 26\% for medical officers, 29\% for nurses, and 19\% for dentists in fiscal year 2021. These shortages are worst in areas that are farthest from the nation's cities, where much of the AIAN population resides, adding yet another obstacle to accessing prenatal care services so critical to avoiding infant mortality. Despite programs designed to encourage health professionals to practice in IHS facilities, including scholarships and loan repayment, underfunding has limited their capacity to offset chronic staffing deficits.
+
+The IHS Purchased/Referred Care (PRC) program, in which patients can receive treatment from outside providers if necessary services cannot be offered at IHS facilities, denied or deferred an estimated \$1.1 billion for approximately 265,785 services for eligible AIANs in fiscal year 2020 due to budget constraints \citep{aspe2022}. This is forced to make many AIAN individuals pay out-of-pocket for treatments or skip treatment entirely, resulting in poorer maternal and infant health outcomes.
+
+
+\subsection{Healthcare Access and Insurance Issues}
+
+In the U.S, over 900,000 native American people lack coverage, although
+the number and share of AIANs who lack coverage varies across states
+\citep{artiga2017}. While Indian Health Service (IHS) has
+provided free services since 1955, underfunding has caused Native
+American people to choose Medicaid or private insurance coverage rather
+than IHS services. While Medicaid provides coverage to more than a
+quarter of (27\%) nonelderly AIAN adults and half of AIAN children, there
+are still many who lack healthcare coverage. Therefore, Indian Health
+Service is important for considerable numbers of AIAN people.
+
+IHS is responsible of providing health service to AIAN people but
+studies show due to being undefunded, they are understaffed. Indian
+American and Alaskan Native people who are living in rural areas having
+hardship in accessing medical care \citep{thorsen2023, warne2014}.
+Also, AIAN people have experienced disparities in receiving health care.
+Research indicates that the American Indian women often face significant
+barriers to prenatal care including long wait times,
+communication challenges with healthcare providers, and lack of
+continuity of care, which can adversely affect maternal and infant
+health outcomes \citep{hanson2012}.
+
+In begening stage of this study I tried to understand how IHS budget
+affect Infant Health Outcomes. For further steps, by expanding the
+dataset, I try to find a causal relationship between IHS funding and
+AIAN infants health outcomes.
+
+\subsection{Role of Prenatal Care}
+
+Prenatal care is an important determinant of improving birth outcomes
+and reducing infant mortality, but Native American women are faced with
+significant barriers to accessing these services. Early and frequent
+prenatal visits provide valuable opportunities for healthcare providers
+to educate pregnant women about healthy pregnancy behaviors, screen for
+medical conditions, and detect congenital anomalies. This is
+particularly vital among American Indian and Alaska Native (AIAN)
+populations, for whom infant mortality rates are highest among all
+racial and ethnic groups in the United States.
+
+Research has shown that AIAN women, overall, have fewer prenatal visits
+compared to their non-Native counterparts. According to CDC Linked
+Birth-Infant Death data from 2000--2002, Native American mothers had one
+of the lowest mean numbers of prenatal visits. Fewer visits limit the
+time to educate mothers about crucial habits such as safe sleeping
+position, early detection of fetal complications, and management of
+maternal risk factors --- all of which have been shown to reduce
+avoidable infant mortality, especially from conditions such as sudden
+infant death syndrome (SIDS) and low birthweight.
+
+\section{Data}
+
+CDC has Period/Cohort Linked Birth-Infant Death Data files that are
+public in state level but to get access to the county-level dataset, I
+am in the process of filling out the required application. I used the
+public dataset to get summary statistics. Figure \ref{fig:infant-mortality} shows how in
+recent 35 years, still infant mortality rate among Native American
+people is high.
+
+For Further steps, considering the hospitalization data of Pregnant AIAN
+women will enrich this study in terms of assisting us in finding a
+suitable IV for prenatal visits. HCUP's Nationwide Database will be used
+for this purpose.
+
+\section{Methodology}
+
+\subsection{Research Framework}
+
+This study employs a Structural Equation Model (SEM) framework to investigate the causal relationship between Indian Health Service (IHS) funding levels and Native American infant mortality rates. The SEM approach allows for examining both direct and indirect effects through multiple pathways, particularly focusing on how IHS funding affects prenatal care access, which subsequently influences infant survival outcomes. This approach follows the framework established by \citet{derso2023}.
+
+\subsection{Data Sources}
+
+The analysis utilizes several key data sources:
+\begin{itemize}
+    \item CDC Period/Cohort Linked Birth-Infant Death Data from 2000-2002 (public version)
+    \item CDC Restricted Period/Cohort Linked Birth-Infant Death Data from 2003-2016 (pending access)
+    \item Hospitalization data from the Healthcare Cost and Utilization Project (HCUP)
+    \item U.S. Department of Health and Human Services Performance Reports (2000-2016)
+\end{itemize}
+
+\subsection{Model Specification}
+
+The study employs a two-equation system to model the hypothesized causal relationships:
+
+\begin{enumerate}
+    \item \textbf{First-stage equation:}\\
+    Prenatal Care = f(IHS Funding, Controls)
+    
+    \item \textbf{Second-stage equation:}\\
+    Infant Mortality = f(Prenatal Care, IHS Funding, Controls)
+\end{enumerate}
+
+For preliminary analysis, a reduced-form regression model was estimated:
+
+\begin{equation}
+\begin{split}
+\text{InfantSurvival}_{ict} = \beta_0 + \beta_1 \cdot \text{IHSBudgetRatio}_{ct} + \beta_2 \cdot \text{MotherAge}_{ict} + \beta_3 \cdot \text{Prenatal1}_{ict} \\
++ \beta_4 \cdot \text{PlaceOfDelivery}_{ict} + \beta_5 \cdot \text{MotherEducation}_{ict} + \beta_6 \cdot \text{BirthWeight}_{ict} \\
++ \beta_7 \cdot \text{Gestation}_{ict} + \beta_8 \cdot \text{MotherMaritalStatus}_{ict} + \beta_9 \cdot \text{CigaretteUse}_{ict} \\
++ \gamma_t + \delta_c + \epsilon_{ict}
+\end{split}
+\end{equation}
+
+Where:
+\begin{itemize}
+    \item $i$ indexes individual births
+    \item $c$ indexes counties
+    \item $t$ indexes time periods (years)
+    \item $\gamma_t$ represents birth year fixed effects
+    \item $\delta_c$ represents county (FIPS-level) fixed effects
+    \item $\epsilon_{ict}$ is the error term capturing unobserved individual-level factors affecting infant survival
+\end{itemize}
+
+\subsection{IHS Budget Index Construction}
+
+To measure IHS funding levels, a budget index was created that accounts for the AIAN population size in each county and the total IHS budget allocation. This ratio provides a per-capita measure of resource availability in each geographic region served by IHS facilities.
+
+\subsection{Control Variables}
+
+The model includes several maternal and infant characteristics as control variables:
+\begin{itemize}
+    \item Mother's age
+    \item Number of prenatal visits
+    \item Place of delivery (hospital vs. non-hospital)
+    \item Mother's education level (years)
+    \item Infant birth weight
+    \item Gestation length
+    \item Mother's marital status
+    \item Cigarette use during pregnancy
+\end{itemize}
+
+\subsection{Fixed Effects}
+
+The inclusion of county and year fixed effects controls for:
+\begin{itemize}
+    \item Time-invariant county-specific factors that might affect infant mortality (e.g., geographic remoteness, community resources)
+    \item Year-specific factors that affect all counties (e.g., national healthcare policies, economic conditions)
+\end{itemize}
+
+\subsection{Hypotheses}
+
+Based on the theoretical framework and prior literature, the following hypotheses guide the investigation:
+
+\begin{enumerate}
+    \item[\textbf{H1:}] There is a direct positive effect of Indian Health Service (IHS) per capita funding on the quantity of prenatal care received by Native American mothers.
+    \item[\textbf{H2:}] Both access to prenatal care and maternal health status mediate the influence of IHS per capita funding on the Native American infant mortality rate.
+    \item[\textbf{H3:}] A lower level of prenatal care utilization is associated with a higher probability of infant mortality among Native American populations.
+    \item[\textbf{H4:}] IHS per capita funding has a direct effect on healthcare infrastructure quality, access to prenatal care, maternal health status, and the infant mortality rate among Native American populations.
+    \item[\textbf{H5:}] Healthcare infrastructure quality, prenatal care utilization, and maternal health status mediate the influence of IHS funding adequacy on the Native American infant mortality rate.
+\end{enumerate}
+
+The primary causal channels being investigated are:
+
+\begin{enumerate}
+    \item \textbf{Channel 1: Funding $\rightarrow$ Prenatal Care}\\
+    More funding enables earlier and more consistent prenatal care through better staffing, equipment, and outreach.
+    
+    \item \textbf{Channel 2: Prenatal Care $\rightarrow$ Infant Mortality}\\
+    Better prenatal care improves birth outcomes through education, screening, and intervention.
+\end{enumerate}
+
+\section{Findings}
+
+\subsection{Prenatal Care Utilization by Race}
+
+Analysis of the CDC Birth-Infant Death Data from 2000-2002 reveals significant disparities in prenatal care utilization across racial groups. American Indian mothers receive the fewest prenatal visits among all racial groups, with an average of approximately 10.0 visits compared to 11.5 visits for White mothers and 12.0 visits for Japanese mothers, who had the highest average.
+
+These disparities in prenatal care are particularly concerning given the established importance of prenatal visits for educating mothers about critical infant health practices. \citet{reichman2010} documented that prenatal care significantly influences important postpartum maternal behaviors such as smoking cessation, breastfeeding initiation, and attendance at well-baby visits.
+
+Notably, prenatal education is strongly associated with increased knowledge and adoption of safe infant sleep positioning practices to prevent Sudden Infant Death Syndrome (SIDS). The American Academy of Pediatrics (2022) has reported that mothers who receive adequate prenatal education are more likely to adopt recommended sleep practices such as placing infants on their backs, which is particularly important for AIAN populations who experience disproportionately high SIDS rates.
+
+\subsection{Infant Mortality Patterns}
+
+Infant mortality rates show stark racial disparities, with American Indian infants experiencing mortality rates of approximately 8.5 deaths per 1,000 births, nearly 70\% higher than White infants (5.0 deaths per 1,000 births). Only Black infants had higher mortality rates at approximately 11.5 deaths per 1,000 births. These patterns are consistent with findings from \citet{wong2014}.
+
+
+\subsection{Regression Results and Interpretation}
+
+To begin the analysis, I estimated a simple OLS regression model to examine the potential relationship between IHS funding and the probability of infant survival among AIAN infants who were born in counties with more than 250,000 population from 2000-2002. In this preliminary model the dependent variable is an indicator for infant survival, and the key independent variable is the IHS budget index which is unique per county and year, along with a set of control variables including maternal age, number of prenatal visits, place of delivery, maternal education, birthweight, gestation length, marital status and cigarette use during pregnancy. County and birth year fixed effects were also included, and standard errors were clustered at the county level.
+
+The regression results shown in Table \ref{tab:regression} provide important insights into the relationship between IHS funding and infant outcomes:
+
+\begin{enumerate}
+    \item \textbf{IHS Budget Impact:} The IHS budget index shows a positive and statistically significant association with infant survival (coefficient = 0.000222, p = 0.0282). This suggests that increased funding for IHS services may contribute to improved infant survival outcomes among AIAN populations.
+
+    \item \textbf{Prenatal Visits:} Interestingly, the coefficient for prenatal visits is negative and statistically significant (-0.000113, p = 0.0240). This counterintuitive finding likely reflects reverse causality - women with high-risk pregnancies typically receive more prenatal visits due to complications, creating a negative statistical association between visits and outcomes. This highlights the need for instrumental variable approaches or structural equation modeling in future analysis.
+
+    \item \textbf{Birth Weight and Gestation:} As expected, birth weight (0.000801, p < 0.001) and gestation length (0.001193, p = 0.0005) show strong positive associations with infant survival. These biological factors remain the strongest predictors of survival, consistent with the broader literature on infant mortality.
+
+    \item \textbf{Maternal Education:} Mother's education shows a negative association with infant survival (-0.000304, p = 0.0199), which contradicts expectations based on the broader literature. This finding warrants further investigation, as it may reflect complex interactions between education, healthcare access, and cultural factors unique to AIAN communities.
+
+    \item \textbf{Other Maternal Characteristics:} After controlling for other factors, maternal age, marital status, and cigarette use during pregnancy do not show statistically significant associations with infant survival in this preliminary model.
+\end{enumerate}
+
+These findings provide encouraging evidence that increased IHS resources may improve AIAN infant health outcomes, though the exact causal mechanisms require further investigation through more sophisticated methodological approaches including structural equation modeling and instrumental variable estimation.
+
+The negative association between prenatal visits and infant outcomes highlights the importance of addressing potential endogeneity and selection effects in future analyses. One promising approach is to identify valid instruments for prenatal care utilization, potentially using geographic distance to IHS facilities or variation in IHS clinical staffing levels across regions.
+
+In the next steps of analysis, I plan to expand the time frame, incorporating additional covariates like the distance between mother residence to the nearest IHS facility, and formally estimate a Structural Equation Model to better understand the causal pathway by which IHS funding may influence infant mortality through intermediary factors such as prenatal care and maternal health. Also, since budget allocation is not an exogenous variable, I may have to consider an instrument variable for that as well. 
+
+\section{Conclusion}
+
+In this preliminary analysis, I have shown that there is a statistically significant positive relationship between IHS funding levels and infant survival rates among American Indian and Alaska Native populations. This finding, while not yet establishing causality, provides important initial evidence that directing more resources toward the Indian Health Service may be an effective policy for reducing the persistent disparities in infant mortality affecting Native American communities.
+
+The regression results also highlight the complex relationship between prenatal care and infant survival outcomes. The counterintuitive negative association between prenatal visits and survival probability likely reflects selection effects and confounding factors, such as high-risk pregnancies necessitating more medical attention. This underscores the importance of developing a more sophisticated causal model in future work, potentially using instrumental variables or structural equation modeling techniques.
+
+Other important findings include the strong positive associations between birthweight, gestation length and infant survival, consistent with existing literature. The unexpected negative association between maternal education and infant survival warrants further investigation and may reflect complex social determinants of health operating in Native American communities.
+
+Future research will expand this analysis to include a larger geographic scope, a longer time period, and additional control variables. The ultimate goal is to develop a structural equation model that can more precisely identify the causal pathways through which IHS funding influences Native American infant health outcomes, providing evidence-based guidance for policy interventions aimed at eliminating these persistent health disparities.
+
+\newpage
+
+\bibliographystyle{apalike}
+\bibliography{references}
+
+\section*{Tables and Figures}
+
+\begin{table}[h]
+\caption{Regression Results for Infant Survival Probability}
+\label{tab:regression}
+\centering
+\begin{tabular}{lcccc}
+\toprule
+Variable & Coefficient & Std. Error & t-value & p-value \\
+\midrule
+IHS Budget Index & 0.000222 & 0.000100 & 2.21 & 0.0282* \\
+Mother Age & 0.000080 & 0.000098 & 0.28 & 0.7806 \\
+Prenatal Visits & -0.000113 & 0.000049 & -2.28 & 0.0240* \\
+Place of Delivery & -0.004496 & 0.002642 & -1.72 & 0.0874 \\
+Mother Education & -0.000304 & 0.000129 & -2.35 & 0.0199* \\
+Birth Weight & 0.000801 & 0.000051 & 15.82 & <0.001*** \\
+Gestation & 0.001193 & 0.000334 & 3.57 & 0.0005*** \\
+Mother Marital Status & -0.001385 & 0.001241 & -1.14 & 0.2557 \\
+Cigarette Use during Pregnancy & 0.000044 & 0.000129 & 0.34 & 0.7329 \\
+\bottomrule
+\multicolumn{5}{l}{\small Note: *p<0.05, **p<0.01, ***p<0.001; County and Year Fixed Effects are excluded.}
+\end{tabular}
+\end{table}
+
+\begin{figure}[!ht]
+\centering
+\caption{Infant Mortality Rates by Race, 1995--2022}
+\label{fig:infant-mortality}
+\includegraphics[width=0.8\textwidth]{IMR by Race.jpg}
+\end{figure}
+
+\begin{figure}[!ht]
+\centering
+\caption{Average Prenatal Visits by Mother's Race, 2000--2002}
+\label{fig:prenatal-visits}
+\includegraphics[width=0.8\textwidth]{Prenatal Visits by Race.jpg}
+\end{figure}
+
+\begin{figure}[!ht]
+\centering
+\caption{Infant Death Rate by Mother's Race, 2000--2002}
+\label{fig:infant-death-rate}
+\includegraphics[width=0.65\textwidth]{Infant Death by race.jpg}
+\end{figure}
+
+\begin{figure}[!ht]
+\centering
+\caption{IHS Budget and Infant Mortality Rate Over Time, 2000--2016}
+\label{fig:ihs-budget-mortality}
+\includegraphics[width=0.8\textwidth]{IMR 2000-2016.jpg}
+\end{figure}
+
+\end{document}
